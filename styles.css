@@ -1,7 +1,13 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #e8dcc4;
+  color: #1f3d2b;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 .navbar-h {
@@ -9,193 +15,256 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(140deg, #1a120e, #3a2418);
-  color: #d5c4ae;
+  background: transparent;
+  color: #e8dcc4;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 18px;
+  padding: 16px 24px;
   z-index: 100;
 }
 
-body{
-    background: linear-gradient(120deg, #3a2418, #6b4a2e);
-}
-
-.pura{
-    background: linear-gradient(140deg, #d5c4ae, #a88462);
-    -webkit-background-clip: text;
+.pura {
+  background: linear-gradient(140deg, #e8dcc4, #c5b496);
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-
 .logo {
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  color: #e8dcc4;
 }
+
 .hamburger {
   background: transparent;
   border: none;
-  color:#d5c4ae;
+  color: #e8dcc4;
   font-size: 1.4rem;
   cursor: pointer;
   display: none;
 }
+
 .menu-h {
   display: flex;
   list-style: none;
-  gap: 18px;
+  gap: 8px;
+  background-color: rgba(232, 220, 196, 0.12);
+  backdrop-filter: blur(8px);
+  padding: 6px;
+  border-radius: 50px;
+  border: 1px solid rgba(232, 220, 196, 0.15);
 }
+
 .menu-h a {
-  color: white;
+  color: #e8dcc4;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 50px;
+  display: block;
+  transition: background 0.2s;
 }
+
+.menu-h a:hover {
+  background-color: rgba(232, 220, 196, 0.2);
+}
+
 @media (max-width: 600px) {
   .hamburger {
     display: block;
   }
+
   .menu-h {
     position: fixed;
-    top: 48px;
+    top: 56px;
     left: 0;
     flex-direction: column;
-    background: #1e3a2e;
+    background: #1f3d2b;
     width: 100%;
     padding: 18px;
+    border-radius: 0;
     transform: translateY(-200%);
     transition: transform 0.3s;
     gap: 14px;
   }
+
   .menu-h.aberto {
     transform: translateY(0);
   }
 }
 
+/* Seção Principal com Degradê + Textura Pontilhada */
 .bv-sec {
+  background: 
+    radial-gradient(rgba(211, 145, 11, 0.14) 1px, transparent 1px),
+    linear-gradient(
+      180deg,
+      #1f3d2b 52%,
+      #78826b 76%,
+      #e8dcc4 100%
+    );
+  background-size: 18px 18px, 100% 100%;
   display: flex;
-  gap: 20px;
+  gap: 24px;
   align-items: center;
-  padding: 100px 16px;
-  max-width: 900px;
+  padding: 120px 24px 80px;
+  max-width: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   flex-wrap: wrap;
 }
+
 .bv-txt,
 .bv-img {
   flex: 1 1 min(100%, 280px);
   min-width: 0;
 }
+
 .tag {
-  background: #3e5a3f;
-  color: #6b7f67;
-  padding: 3px 10px;
-  border-radius: 12px;
-  font-size: 0.72rem;
-  font-weight: 800;
+  background: rgba(232, 220, 196, 0.15);
+  color: #e8dcc4;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-block;
 }
+
 .bv-txt h1 {
-  font-size: clamp(1.4rem, 4vw, 2rem);
-  color: #6b7f67;
-  margin: 10px 0;
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  color: #e8dcc4;
+  margin: 14px 0;
+  line-height: 1.1;
 }
+
 .bv-txt p {
-  color: #d5c4ae;
-  font-size: 0.9rem;
+  color: rgba(232, 220, 196, 0.85);
+  font-size: 1.15rem;
+  line-height: 1.5;
 }
+
 .bv-img img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 16px;
 }
 
 .ben-sec {
-  padding: 40px 16px;
+  padding: 60px 16px;
   text-align: center;
+  background: linear-gradient(
+    180deg,
+    #e8dcc4 0%,
+    #b5b69c 45%,
+    #1f3d2b 100%
+  );
 }
+
 .ben-sec h2 {
-  color: #6b7f67;
-  margin-bottom: 20px;
-  font-size: 1.5rem;
+  color: #1f3d2b;
+  margin-bottom: 24px;
+  font-size: 1.6rem;
 }
+
 .ben-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
-  gap: 14px;
+  gap: 16px;
   max-width: 800px;
   margin: 0 auto;
 }
+
 .ben {
-  background: linear-gradient(120deg, #1e3a2e, #3e5a3f);
-  padding: 18px;
-  border: 2px solid #3d4337;
-  border-radius: 12px;
+  background: rgba(31, 61, 43, 0.9);
+  padding: 22px;
+  border: 1px solid rgba(232, 220, 196, 0.2);
+  border-radius: 16px;
 }
+
 .ben span {
   font-size: 1.8rem;
   display: block;
-  margin-bottom: 6px;
-}
-.ben h3 {
-  font-size: 1rem;
-  color: #f0f0f0;
-  margin-bottom: 4px;
-}
-.ben p {
-  color: #d5c4ae;
-  font-size: 0.85rem;
+  margin-bottom: 8px;
 }
 
+.ben h3 {
+  font-size: 1.05rem;
+  color: #e8dcc4;
+  margin-bottom: 6px;
+}
+
+.ben p {
+  color: rgba(232, 220, 196, 0.8);
+  font-size: 0.88rem;
+}
+
+/* Seção de Produtos */
 .prod-sec {
-  padding: 40px 16px;
+  padding: 60px 16px;
   text-align: center;
+  background-color: #1f3d2b;
 }
+
 .prod-sec h2 {
-  color: #1e293b;
-  margin-bottom: 20px;
+  color: #e8dcc4;
+  margin-bottom: 24px;
 }
+
 .prod-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-  gap: 16px;
-  max-width: 600px;
+  gap: 18px;
+  max-width: 650px;
   margin: 0 auto;
 }
+
 .prod {
-  background: white;
-  border: 2px solid #e2e8f0;
-  border-radius: 12px;
+  background: #e8dcc4;
+  border: 1px solid rgba(31, 61, 43, 0.15);
+  border-radius: 16px;
   overflow: hidden;
-  padding-bottom: 14px;
+  padding-bottom: 16px;
+  color: #1f3d2b;
 }
+
 .prod img {
   width: 100%;
   aspect-ratio: 3/2;
   object-fit: cover;
 }
+
 .prod h4 {
-  margin: 10px 0 4px;
-  font-size: 0.95rem;
+  margin: 12px 0 4px;
+  font-size: 1rem;
+  color: #1f3d2b;
 }
+
 .v {
   font-weight: 800;
-  color: #7c3aed;
+  color: #3e5a3f;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
+
 .prod button {
-  background: #7c3aed;
-  color: white;
+  background: #1f3d2b;
+  color: #e8dcc4;
   border: none;
-  padding: 6px 16px;
-  border-radius: 16px;
+  padding: 8px 20px;
+  border-radius: 50px;
   font-weight: 700;
   cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.prod button:hover {
+  opacity: 0.9;
 }
 
 .foot-s {
-  background: #1e293b;
-  color: #94a3b8;
+  background: #152b1e;
+  color: rgba(232, 220, 196, 0.6);
   text-align: center;
   padding: 24px 14px;
   font-size: 0.82rem;
