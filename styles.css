@@ -7,7 +7,14 @@
 body {
   background-color: #e8dcc4;
   color: #1f3d2b;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 .navbar-h {
@@ -97,15 +104,12 @@ body {
 
 /* Seção Principal com Degradê + Textura Pontilhada */
 .bv-sec {
-  background: 
+  background:
     radial-gradient(rgba(211, 145, 11, 0.14) 1px, transparent 1px),
-    linear-gradient(
-      180deg,
-      #1f3d2b 52%,
-      #78826b 76%,
-      #e8dcc4 100%
-    );
-  background-size: 18px 18px, 100% 100%;
+    linear-gradient(180deg, #1f3d2b 52%, #78826b 76%, #e8dcc4 100%);
+  background-size:
+    18px 18px,
+    100% 100%;
   display: flex;
   gap: 24px;
   align-items: center;
@@ -153,12 +157,7 @@ body {
 .ben-sec {
   padding: 60px 16px;
   text-align: center;
-  background: linear-gradient(
-    180deg,
-    #e8dcc4 0%,
-    #b5b69c 45%,
-    #1f3d2b 100%
-  );
+  background: linear-gradient(180deg, #e8dcc4 0%, #b5b69c 45%, #1f3d2b 100%);
 }
 
 .ben-sec h2 {
@@ -192,11 +191,13 @@ body {
   font-size: 1.05rem;
   color: #e8dcc4;
   margin-bottom: 6px;
+  font-weight: 7000;
 }
 
 .ben p {
   color: rgba(232, 220, 196, 0.8);
   font-size: 0.88rem;
+  font-weight: 300;
 }
 
 /* Seção de Produtos */
@@ -220,12 +221,18 @@ body {
 }
 
 .prod {
-  background: #e8dcc4;
-  border: 1px solid rgba(31, 61, 43, 0.15);
+  background: #3e5a3f;
+  border: 1px solid #c5b496;
   border-radius: 16px;
   overflow: hidden;
   padding-bottom: 16px;
   color: #1f3d2b;
+  transition: ease-in-out box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.prod:hover {
+  box-shadow: 0 5px 10px 0 #c5b496ad;
 }
 
 .prod img {
@@ -263,9 +270,73 @@ body {
 }
 
 .foot-s {
-  background: #152b1e;
+  background: #1f3d2b;
+  border: 1px solid #c5b496;
   color: rgba(232, 220, 196, 0.6);
   text-align: center;
   padding: 24px 14px;
   font-size: 0.82rem;
+}
+
+.ecom-banner {
+  background: linear-gradient(135deg, #1f3d2b);
+  color: white;
+  padding: 32px 14px;
+  text-align: center;
+}
+.ecom-banner h2 {
+  font-size: 1.45rem;
+  margin-bottom: 4px;
+}
+.ecom-banner p {
+  font-size: 0.88rem;
+  opacity: 0.9;
+}
+.ecom-vitrine {
+  background-color: #1f3d2b;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: 14px;
+  padding: 20px 14px;
+  min-width: 100%;
+  margin: 0 auto;
+}
+.card-prod {
+  background: #3e5a3f;
+  border: 1px solid #c5b496;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 12px;
+  text-align: center;
+   transition: transform ease 200ms,  box-shadow ease 200ms;
+}
+
+.card-prod:hover{
+  box-shadow: 0 5px 10px 0 #c5b496ad;
+  transform: scale(1.06);
+}
+.card-prod img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+.card-prod h4 {
+  font-size: 0.92rem;
+  margin: 8px 0 2px;
+}
+.preco {
+  display: block;
+  font-weight: 800;
+  color: #b5b69c;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+.card-prod button {
+  background: #1f3d2b;
+  color: #b5b69c;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
 }
